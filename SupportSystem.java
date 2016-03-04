@@ -42,7 +42,8 @@ public class SupportSystem
                                   //o con una línea  if(input.trim().startsWith("bye"))----------------------------------  0083
             input = input.toLowerCase();//hace que las mayusculas dentro de la cadena input se hagam minusculas. --------  0083
                                   //o con una línea  if(input.toLowerCase().trim().startsWith("bye"))---------------------  0083
-            if(input.equals("bye")) {//comprobamos si la frase puesta por el usuario es identica a  bye
+            if(input.equals("bye")) {//comprobamos si la frase puesta por el usuario es identica a  bye ------------------  0084
+                                  //o con una línea  if(input.toLowerCase().trim().equals("bye"))---------------------  008
                 finished = true;//si empieza por bye cambio el valor true y el bucle ya no se ejecuta
             }
             else {

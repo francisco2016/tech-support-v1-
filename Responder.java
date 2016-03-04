@@ -1,3 +1,6 @@
+
+import java.util.Random;
+import java.util.ArrayList;
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response to an input string.
@@ -7,11 +10,21 @@
  */
 public class Responder
 {
+    
+    private Random aleatorio;
+    private ArrayList<String> respuesta;
     /**
      * Construct a Responder - nothing to do
      */
     public Responder()
     {
+        aleatorio = new Random();
+        respuesta = new ArrayList<>();
+        respuesta.add("Cuando comenzo el problema?");
+        respuesta.add("Pruebe reiniciano el equipo.");
+        respuesta.add("Lea las instrucciones en el indice 2");
+        respuesta.add("Recargue la batería.");
+        respuesta.add("Tiene que llebar el equipo al técnico");
     }
 
     /**
@@ -20,6 +33,11 @@ public class Responder
      */
     public String generateResponse()
     {
-        return "That sounds interesting. Tell me more...";
+       int solucion = aleatorio.nextInt(respuesta.size());
+       
+       return  respuesta.get(solucion);
+        
+        // return "That sounds interesting. Tell me more...";
+       
     }
 }
