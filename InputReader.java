@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 /**
  * InputReader reads typed text input from the standard text terminal. 
+ *-------------------- Lector de entrada lee la entrada de texto mecanografiado de la terminal de texto estándar
  * The text typed by a user is returned.
  * 
  * @author     Michael KÃ¶lling and David J. Barnes
@@ -22,6 +23,7 @@ public class InputReader
 
     /**
      * Read a line of text from standard input (the text terminal),
+     * ----------------------------Leer una línea de texto de la entrada estándar (el terminal de texto)
      * and return it as a String.
      *
      * @return  A String typed by the user.

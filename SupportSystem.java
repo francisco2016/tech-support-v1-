@@ -37,17 +37,17 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput();
-
-            if(input.startsWith("bye")) {
-                finished = true;
+            String input = reader.getInput();//capturamos la frase puesta por el usuario y la guardo en la VL input.
+            input = input.trim();//quito los espacios a la VL con el mt trim()------------------------------------------- 0083
+            if(input.startsWith("bye")) {//comprobamos si la frase puesta por el usuario empieza por bye
+                finished = true;//si empieza por bye cambio el valor true y el bucle ya no se ejecuta
             }
             else {
                 String response = responder.generateResponse();
                 System.out.println(response);
             }
         }
-        printGoodbye();
+        printGoodbye();// y pasa a ejecutarse el mt  printGoodbye();
     }
 
     /**
