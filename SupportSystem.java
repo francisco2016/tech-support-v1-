@@ -39,6 +39,9 @@ public class SupportSystem
         while(!finished) {
             String input = reader.getInput();//capturamos la frase puesta por el usuario y la guardo en la VL input.
             input = input.trim();//quito los espacios a la VL con el mt trim()------------------------------------------- 0083
+                                  //o con una línea  if(input.trim().startsWith("bye"))----------------------------------  0083
+            input = input.toLowerCase();//hace que las mayusculas dentro de la cadena input se hagam minusculas. --------  0083
+                                  //o con una línea  if(input.toLowerCase().trim().startsWith("bye"))---------------------  0083
             if(input.startsWith("bye")) {//comprobamos si la frase puesta por el usuario empieza por bye
                 finished = true;//si empieza por bye cambio el valor true y el bucle ya no se ejecuta
             }
