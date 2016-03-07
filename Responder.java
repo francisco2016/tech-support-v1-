@@ -41,13 +41,11 @@ public class Responder
      */
     public String generateResponse(String key)
     {
-
-        //         String respuestas = null;
-        //         respuestas = respuesta.get(aleatorio.nextInt(respuesta.size()));;
-        //         if (palabra.containsKey(key)) {//-------------------------------------------------------------- 0092
-        //             respuestas = palabra.get(key);
-        //         } 
-        return respuesta.get(aleatorio.nextInt(respuesta.size()));
+        String respuestas = palabra.get(key);
+        if(respuestas == null){
+            respuestas = respuesta.get(aleatorio.nextInt(respuesta.size()));
+        }
+        return respuestas;
     }
 }
 
