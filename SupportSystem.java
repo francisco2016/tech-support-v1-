@@ -15,7 +15,7 @@ public class SupportSystem
 {
     private InputReader reader;
     private Responder responder;
-    
+
     /**
      * Creates a technical support system.
      */
@@ -47,8 +47,8 @@ public class SupportSystem
                 finished = true;//si empieza por bye cambio el valor true y el bucle ya no se ejecuta
             }
             else {
-                String response = responder.generateResponse();
-                System.out.println(response);
+                String response = responder.generateResponse(input);//---------- 0092 añadido input
+                 System.out.println(response);
             }
         }
         printGoodbye();// y pasa a ejecutarse el mt  printGoodbye();
