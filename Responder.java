@@ -2,6 +2,8 @@
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;//-----0095
+import java.util.Iterator; //-----0095
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response to an input string.
@@ -39,9 +41,13 @@ public class Responder
      * Generate a response.
      * @return   A string that should be displayed as the response
      */
-    public String generateResponse(String key)
+    //public String generateResponse(String key)//modificado para solución 0095
+    public String generateResponse(HashSet<String> key)// ----0095 1º este Mt ahora recibe un HashSet de cadenas, no un String
     {
-        String respuestas = palabra.get(key);
+        String respuestas = null;
+        Iterator<String> iterator = key.iterator();//0095 para obtener un único elemento del HashSet
+        String userInputString = iterator.next();//0095 para obtener un único elemento del HashSet
+         respuestas = palabra.get(userInputString);
         if(respuestas == null){
             respuestas = respuesta.get(aleatorio.nextInt(respuesta.size()));
         }
